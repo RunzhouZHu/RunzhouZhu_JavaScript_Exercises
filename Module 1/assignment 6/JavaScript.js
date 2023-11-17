@@ -1,19 +1,19 @@
-year = parseInt(prompt("Please enter the year: "))
+caculateConfirm = confirm("Should I calculate the square root?");
 
-if(year%100 === 0)
+if(caculateConfirm === true)
 {
-    isLeapYear = year % 400 === 0;
+    number = parseFloat(prompt("Please enter the number: "));
+    if(number>=0)
+    {
+        squareRoot = Math.sqrt(number);
+        document.write(`The square root is ${squareRoot}.`);
+    }
+    else
+    {
+        document.write("The square root of a negative number is not defined.");
+    }
 }
 else
 {
-    isLeapYear = year % 4 === 0;
-}
-
-if(isLeapYear === true)
-{
-    document.write("This year is leap year.")
-}
-else
-{
-    document.write("This year is not leap year.")
+    document.write("The square root is not calculated.");
 }

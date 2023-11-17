@@ -1,9 +1,19 @@
-a = parseInt(prompt("Please enter the first integer: "));
-b = parseInt(prompt("Please enter the second integer: "));
-c = parseInt(prompt("Please enter the third integer: "));
+name = prompt("Please enter your name: ");
+sorting = Math.floor(Math.random()*4);
 
-sum = a + b + c;
-product = a * b * c;
-average = (a + b + c) / 3
-
-document.write(`The sum is ${sum}. The product is ${product}. The average is ${average}.`)
+if(sorting === 0)
+{
+    document.write(`${name}, you are at Gryffindor.`);
+}
+else if(sorting === 1)
+{
+    document.write(`${name}, you are at Slytherin.`);
+}
+else if(sorting === 2)
+{
+    document.write(`${name}, you are at Hufflepuff.`);
+}
+else
+{
+    document.write(`${name}, you are at Ravenclaw.`);
+}

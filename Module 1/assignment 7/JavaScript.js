@@ -1,19 +1,8 @@
-caculateConfirm = confirm("Should I calculate the square root?")
+numberOfDice = parseInt(prompt("Please enter the number of dice rolls: "));
+let sum = 0;
+for (let i = 1; i <= numberOfDice; i++) {
+    a = Math.floor(Math.random() * 6) + 1;
+    sum = sum + a;
+}
 
-if(caculateConfirm === true)
-{
-    number = parseFloat(prompt("Please enter the number: "))
-    if(number>=0)
-    {
-        squareRoot = Math.sqrt(number)
-        document.write(`The square root is ${squareRoot}.`)
-    }
-    else
-    {
-        document.write("The square root of a negative number is not defined.")
-    }
-}
-else
-{
-    document.write("The square root is not calculated.")
-}
+document.write(`The sum is ${sum}.`)

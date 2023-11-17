@@ -1,9 +1,25 @@
-numberOfDice = parseInt(prompt("Please enter the number of dice rolls: "));
-let sum = 0;
-for (let i=1; i<=numberOfDice; i++)
-{
-    a = Math.floor(Math.random()*6) + 1;
-    sum = sum + a;
-}
+startYear = parseInt(prompt("Please enter the start year: "));
+endYear = parseInt(prompt("Please enter the end year: "));
+let list = document.getElementById("list")
 
-document.write(`The sum is ${sum}.`)
+for (let i = startYear; i <= endYear; i++)
+{
+    if (i % 100 === 0)
+    {
+        if (i % 400 === 0)
+        {
+            const listItem = document.createElement('li');
+            listItem.textContent = i;
+            list.appendChild(listItem)
+        }
+    }
+    else
+    {
+        if(i % 4 === 0)
+        {
+            const listItem = document.createElement('li');
+            listItem.textContent = i;
+            list.appendChild(listItem)
+        }
+    }
+}

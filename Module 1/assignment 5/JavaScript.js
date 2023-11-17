@@ -1,19 +1,19 @@
-name = prompt("Please enter your name: ")
-sorting = Math.floor(Math.random()*4)
+year = parseInt(prompt("Please enter the year: "))
 
-if(sorting === 0)
+if(year%100 === 0)
 {
-    document.write(`${name}, you are at Gryffindor.`)
-}
-else if(sorting === 1)
-{
-    document.write(`${name}, you are at Slytherin.`)
-}
-else if(sorting === 2)
-{
-    document.write(`${name}, you are at Hufflepuff.`)
+    isLeapYear = year % 400 === 0;
 }
 else
 {
-    document.write(`${name}, you are at Ravenclaw.`)
+    isLeapYear = year % 4 === 0;
+}
+
+if(isLeapYear === true)
+{
+    document.write("This year is leap year.");
+}
+else
+{
+    document.write("This year is not leap year.");
 }
