@@ -1,4 +1,4 @@
-caculateConfirm = confirm("Should I calculate the square root?");
+let caculateConfirm = confirm("Should I calculate the square root?");
 
 if(caculateConfirm === true)
 {

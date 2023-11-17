@@ -1,5 +1,5 @@
-name = prompt("Please enter your name: ");
-sorting = Math.floor(Math.random()*4);
+let name = prompt("Please enter your name: ");
+let sorting = Math.floor(Math.random()*4);
 
 if(sorting === 0)
 {

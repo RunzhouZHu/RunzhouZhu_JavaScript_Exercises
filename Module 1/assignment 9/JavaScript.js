@@ -1,4 +1,4 @@
-a = parseInt(prompt("Please enter a number: "));
+let a = parseInt(prompt("Please enter a number: "));
 let isNotPrimeNumber;
 if (a > 2) {
     for (let i = 2; i < a; i++) {

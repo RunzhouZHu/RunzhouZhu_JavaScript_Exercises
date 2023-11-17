@@ -1,4 +1,5 @@
-year = parseInt(prompt("Please enter the year: "))
+let year = parseInt(prompt("Please enter the year: "))
+let isLeapYear
 
 if(year%100 === 0)
 {
