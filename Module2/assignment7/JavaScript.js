@@ -1,15 +1,16 @@
-function diceRoll()
+function diceRoll(side)
 {
-    a = Math.floor(Math.random() * 6 + 1);
+    a = Math.floor(Math.random() * side + 1);
     return a;
 }
 
+let side = parseInt(prompt("Please enter the sides of the dice: "));
 const results = [];
 while (true)
 {
-    a = diceRoll();
+    a = diceRoll(side);
     results.push(a)
-    if (a === 6)
+    if (a === side)
     {
         results.forEach(name =>{
             const list = document.getElementById('list');
