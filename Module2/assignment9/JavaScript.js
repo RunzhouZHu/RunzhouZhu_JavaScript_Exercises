@@ -1,12 +1,17 @@
-function concat(list)
+function even(list)
 {
-    let a = '';
+    const list1 = []
     list.forEach(name =>{
-        a = a + name;
+        if(name % 2 === 0)
+        {
+            list1.push(name)
+        }
     })
-    return a;
+    return list1
 }
 
-const list = ['Johnny', 'DeeDee', 'Joey', 'Marky'];
-result = concat(list)
-document.write(result)
+const list = [1,2,3,4,5,6,7,8,9,10]
+list1 = even(list)
+
+console.log(list)
+console.log(list1)
