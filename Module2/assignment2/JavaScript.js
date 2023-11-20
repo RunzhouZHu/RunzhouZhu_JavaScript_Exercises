@@ -1,11 +1,19 @@
-const numbers = [];
-for(let i=1;i<=5;i++)
+const participants = [];
+
+number = parseInt(prompt("Please enter the number of participants: "));
+
+for (let i = 1; i <= number; i++)
 {
-    a = parseInt(prompt("Please enter a number: "));
-    numbers.push(a);
+    name = prompt(`Please enter the name of participant ${i}`);
+    participants.push(name)
 }
 
-for(let j=numbers.length;j>=0;j--)
-{
-    console.log(numbers[j]);
-}
+participants.sort();
+
+const orderedList = document.getElementById('List');
+
+participants.forEach(name =>{
+    const listItem = document.createElement('li');
+    listItem.textContent = name;
+    orderedList.appendChild(listItem);
+    })
