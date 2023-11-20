@@ -1,16 +1,13 @@
-const dogs = [];
+const list = []
+let number;
+do {
+    number = parseInt(prompt("Please enter a number: "));
+    list.push(number);
+}while (number !== 0)
 
-for(let i=1;i<=6;i++)
+list.reverse();
+
+for(let name in list)
 {
-    name = prompt(`Please enter the name of dog ${i}`);
-    dogs.push(name)
+    console.log(name);
 }
-
-dogs.reverse();
-
-list = document.getElementById('List');
-dogs.forEach(name =>{
-    const listItem = document.createElement('li');
-    listItem.textContent = name;
-    list.appendChild(listItem);
-})
