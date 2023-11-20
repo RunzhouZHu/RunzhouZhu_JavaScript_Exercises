@@ -26,7 +26,7 @@ for(let i = 1;i<=numberOfVoters;i++)
 // Compare
 const result = []
 result.push(voteCount[0])
-for(let i=0;i<voteCount.length;i++)
+for(let i=0;i<voteCount.length-1;i++)
 {
     if(result[0]<voteCount[i+1])
     {
@@ -41,6 +41,8 @@ for(let i=0;i<voteCount.length;i++)
 // Output
 console.log(`The winner is ${result[0].name} with ${result[0].votes} votes.`);
 console.log('results: ');
-result.forEach(name =>{
-    console.log(`${name.name} : ${name.votes} votes.`);
-})
+for(let a of result)
+{
+    console.log(`${a.name} : ${a.votes} votes.`);
+}
+
