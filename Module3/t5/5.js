@@ -93,3 +93,17 @@ const picArray = [
 ];
 
 // add your code here
+const pictures = document.getElementById('pictures')
+for (let i=0;i<picArray.length;i++)
+{
+  const article = document.createElement('article')
+  article.classList.add('card')
+  article.innerHTML = "<h2>title_from_picArray</h2>\n" +
+      "<figure>\n" +
+      "<img src=" + picArray[i].image.medium+ " alt=" + picArray[i].title + ">\n" +
+      "<figcaption>" + picArray[i].caption + "</figcaption>\n" +
+      "</figure>\n" +
+      "<p>" + picArray[i].description + "</p>"
+
+  pictures.appendChild(article)
+}
