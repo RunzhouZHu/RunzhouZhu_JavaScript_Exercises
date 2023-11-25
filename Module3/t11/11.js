@@ -94,7 +94,8 @@ const picArray = [
 
 // add your code here
 const pictures = document.getElementById('pictures');
-for (let i=0;i<picArray.length;i++)
+
+for (let i=0; i<picArray.length; i++)
 {
   const article = document.createElement('article');
   article.classList.add('card');
@@ -120,6 +121,22 @@ for (let i=0;i<picArray.length;i++)
   pictures.appendChild(article)
 }
 
-document.querySelector('article').addEventListener('click', function (evt){
 
-})
+const dialog = document.querySelector('dialog');
+const article = document.querySelectorAll('article');
+for (let i=0; i<article.length; i++)
+{
+  article[i].addEventListener('click', function (evt){
+    const img = document.querySelector('img');
+    img.src = picArray[i].image.large;
+    img.alt = picArray[i].title;
+
+    dialog.showModal();
+    img.addEventListener('click', function (evt) {
+      dialog.close();
+    })
+  })
+}
+
+
+
