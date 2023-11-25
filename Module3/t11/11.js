@@ -93,17 +93,33 @@ const picArray = [
 ];
 
 // add your code here
-const pictures = document.getElementById('pictures')
+const pictures = document.getElementById('pictures');
 for (let i=0;i<picArray.length;i++)
 {
-  const article = document.createElement('article')
-  article.classList.add('card')
-  article.innerHTML = "<h2>title_from_picArray</h2>\n" +
-      "<figure>\n" +
-      "<img src=" + picArray[i].image.medium+ " alt=" + picArray[i].title + ">\n" +
-      "<figcaption>" + picArray[i].caption + "</figcaption>\n" +
-      "</figure>\n" +
-      "<p>" + picArray[i].description + "</p>"
+  const article = document.createElement('article');
+  article.classList.add('card');
+
+  const h2 = document.createElement('h2');
+  h2.innerText = picArray[i].title;
+  article.appendChild(h2);
+
+  const figure = document.createElement('figure');
+  const img = document.createElement('img');
+  const figcaption = document.createElement('figcaption');
+  img.src = picArray[i].image.medium;
+  img.alt = picArray[i].title;
+  figcaption.innerText = picArray[i].caption;
+  figure.appendChild(img);
+  figure.appendChild(figcaption);
+  article.appendChild(figure);
+
+  const p = document.createElement('p')
+  p.innerText = picArray[i].description
+  article.appendChild(p)
 
   pictures.appendChild(article)
 }
+
+document.querySelector('article').addEventListener('click', function (evt){
+
+})
