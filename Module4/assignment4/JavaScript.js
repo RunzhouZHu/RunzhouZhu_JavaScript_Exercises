@@ -39,7 +39,9 @@ form.addEventListener('submit', async function (evt)
 
         // Add img
         const img = document.createElement('img')
-        img.src = response[i].show.image?.medium
+        response[i].show.image == null ?
+            img.src = "https://via.placeholder.com/210x295?text=Not%20Found" :
+            img.src = response[i].show.image.medium
         img.alt = response[i].show.name
         article.appendChild(img)
 
